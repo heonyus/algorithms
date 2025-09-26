@@ -1,11 +1,10 @@
 n = int(input())
 
-b = [0]
+sum_val = 0
 
-for i in range(1, 100):
+for i in range(1, 101):
 # 1 부터 차례대로 100까지 1씩 증가
-    b.append(i + b[i-1])
-    if b[-1]>n:
+    sum_val += i
+    if sum_val>=n:
+        print(i)
         break
-
-print(b[-2])
